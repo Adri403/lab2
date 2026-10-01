@@ -1,13 +1,12 @@
-package lab2;
 public class Coisa {
     public static void main(String[] args) {
         registrarDescanso();
         System.out.println("-----");
-        registrarTempoOnline();
+//        registrarTempoOnline();
         System.out.println("-----");
         controlarDisciplina();
         System.out.println("-----");
-        registrarResumos();
+        RegistroResumos();
     }
     public static void registrarDescanso() {
         Descanso descanso = new Descanso();
@@ -22,19 +21,19 @@ public class Coisa {
         descanso.defineNumeroSemanas(1);
         System.out.println(descanso.getStatusGeral());
     }
-    private static void registrarTempoOnline() {
-        RegistroTempoOnline tempoLP2 = new RegistroTempoOnline("LP2", 30);
-        tempoLP2.adicionaTempoOnline(10);
-        System.out.println(tempoLP2.atingiuMetaTempoOnline());
-        tempoLP2.adicionaTempoOnline(10);
-        tempoLP2.adicionaTempoOnline(10);
-        System.out.println(tempoLP2.atingiuMetaTempoOnline());
-        tempoLP2.adicionaTempoOnline(2);
-        System.out.println(tempoLP2.atingiuMetaTempoOnline());
-        System.out.println(tempoLP2.toString());
-        RegistroTempoOnline tempoP2 = new RegistroTempoOnline("P2");
-        System.out.println(tempoP2.toString());
-    }
+//    private static void registrarTempoOnline() {
+//        RegistroTempoOnline tempoLP2 = new RegistroTempoOnline("LP2", 30);
+//        tempoLP2.adicionaTempoOnline(10);
+//        System.out.println(tempoLP2.atingiuMetaTempoOnline());
+//        tempoLP2.adicionaTempoOnline(10);
+//        tempoLP2.adicionaTempoOnline(10);
+//        System.out.println(tempoLP2.atingiuMetaTempoOnline());
+//        tempoLP2.adicionaTempoOnline(2);
+//        System.out.println(tempoLP2.atingiuMetaTempoOnline());
+//        System.out.println(tempoLP2.toString());
+//        RegistroTempoOnline tempoP2 = new RegistroTempoOnline("P2");
+//        System.out.println(tempoP2.toString());
+//    }
     private static void controlarDisciplina() {
         Disciplina prog2 = new Disciplina("PROGRAMACAO 2");
         prog2.cadastraHoras(4);
@@ -46,7 +45,7 @@ public class Coisa {
         System.out.println(prog2.aprovado());
         System.out.println(prog2.toString());
     }
-    private static void registrarResumos() {
+    private static void RegistroResumos() {
         RegistroResumos meusResumos = new RegistroResumos(100);  // 100 resumos
 
         meusResumos.adiciona("Classes", "Classes definem um tipo e a base de código para criação de objetos.");
@@ -67,4 +66,5 @@ public class Coisa {
         System.out.println(meusResumos.temResumo("Classes"));
         System.out.println(meusResumos.temResumo("Objetos"));
     }
+
 }
