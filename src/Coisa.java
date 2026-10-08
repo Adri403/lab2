@@ -59,6 +59,12 @@ public class Coisa {
             System.out.println(resumos[i]);
         }
 
+        String termo = "Um";
+        String[] x = meusResumos.busca(termo);
+
+        for (int i = 0; i < x.length; i++) {
+            System.out.println(x[i]);
+        }
 
         System.out.println();
         System.out.println("Resumos: ");
